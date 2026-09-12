@@ -24,11 +24,12 @@
             <legend>Дані про тварину</legend>
             <p>
                 <label for="pet_name">Кличка тварини:</label>
-                <input type="text" id="pet_name" name="pet_name" required>
+                <input type="text" id="pet_name" name="pet_name" required minlength="2" maxlength="50" pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ'\s\-]+$" title="Кличка повинна містити тільки літери, пробіли або дефіс (від 2 символів)">
             </p>
             <p>
                 <label for="pet_type">Тип тварини:</label>
-                <select id="pet_type" name="pet_type">
+                <select id="pet_type" name="pet_type" required>
+                    <option value="" disabled selected>-- Оберіть тип --</option>
                     <option value="dog">Собака</option>
                     <option value="cat">Кішка</option>
                     <option value="parrot">Папуга</option>
@@ -39,11 +40,11 @@
             </p>
             <p>
                 <label for="pet_birth_date">Дата народження:</label>
-                <input type="date" id="pet_birth_date" name="pet_birth_date">
+                <input type="date" id="pet_birth_date" name="pet_birth_date" required max="2026-12-31">
             </p>
             <p>
                 <label for="pet_color">Колір:</label>
-                <input type="text" id="pet_color" name="pet_color">
+                <input type="text" id="pet_color" name="pet_color" required pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ'\s\-]+$" title="Колір повинен містити тільки літери">
             </p>
         </fieldset>
 
@@ -51,19 +52,19 @@
             <legend>Дані про власника</legend>
             <p>
                 <label for="owner_name">ПІБ власника:</label>
-                <input type="text" id="owner_name" name="owner_name" required>
+                <input type="text" id="owner_name" name="owner_name" required minlength="3" maxlength="100" pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ'\s\-]+$" title="ПІБ повинно містити тільки літери та пробіли">
             </p>
             <p>
                 <label for="owner_phone">Телефон:</label>
-                <input type="tel" id="owner_phone" name="owner_phone" placeholder="+380XXXXXXXXX">
+                <input type="tel" id="owner_phone" name="owner_phone" required pattern="^\+380\d{9}$" placeholder="+380XXXXXXXXX" title="Формат телефону: +380XXXXXXXXX (9 цифр після коду +380)">
             </p>
             <p>
                 <label for="owner_email">Електронна адреса:</label>
-                <input type="email" id="owner_email" name="owner_email" placeholder="example@domain.com">
+                <input type="email" id="owner_email" name="owner_email" required placeholder="example@domain.com" title="Введіть коректну адресу електронної пошти">
             </p>
             <p>
                 <label for="owner_age">Вік (від 18 до 100):</label>
-                <input type="number" id="owner_age" name="owner_age" min="18" max="100">
+                <input type="number" id="owner_age" name="owner_age" min="18" max="100" step="1" required title="Вік повинен бути цілим числом від 18 до 100">
             </p>
         </fieldset>
 
