@@ -1,0 +1,25 @@
+body {
+    background-image: url("../img/forest_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.back_link {
+    padding: 15px;
+}
+.back_link a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333333;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back_link a:hover {
+    background-color: #ffffff;
+}

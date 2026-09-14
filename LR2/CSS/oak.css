@@ -1,0 +1,36 @@
+body {
+    background-color: #d7ecd9;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+a {
+    color: #616161;
+}
+.img_left {
+    float: left;
+    margin: 5px 20px 10px 0;
+    width: 300px;
+    border-radius: 10px;
+}
+.img_right {
+    float: right;
+    margin: 5px 0 10px 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+.p_maroon_bold {
+    color: #800000;
+    font-weight: bold;
+}
+.p_italic {
+    font-style: italic;
+}
+.first_word_red {
+    color: red;
+}
+.nav_bottom {
+    clear: both;
+    padding-top: 20px;
+}
