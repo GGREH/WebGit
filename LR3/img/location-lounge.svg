@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" width="260" height="220">
+  <rect width="260" height="220" fill="#ffffff" stroke="#c4d6c0" stroke-width="2"/>
+  <rect x="15" y="15" width="230" height="150" fill="#edf4ec" rx="4"/>
+  <ellipse cx="130" cy="140" rx="95" ry="25" fill="#ffffff" opacity="0.75"/>
+  <path d="M100 100 L130 70 L160 100 Z" fill="#3b573b"/>
+  <rect x="110" y="100" width="40" height="20" fill="#3b573b"/>
+  <text x="130" y="185" text-anchor="middle" fill="#253825" font-family="Georgia, serif" font-size="16" font-weight="bold">Літня Сцена</text>
+  <text x="130" y="205" text-anchor="middle" fill="#526952" font-family="Georgia, serif" font-size="13">Паркова тераса Open-Air</text>
+</svg>

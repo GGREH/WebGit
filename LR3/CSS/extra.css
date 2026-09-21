@@ -1,0 +1,39 @@
+.extra-section {
+    width: 100%;
+    background-color: var(--color-bg-container);
+    border-bottom: 2px solid var(--color-border);
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+.extra-section__title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-h2);
+    color: var(--color-title);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.extra-section__banner {
+    background-color: var(--color-bg-card);
+    border: 2px dashed var(--color-border-subtle);
+    border-radius: 6px;
+    padding: 20px 25px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.extra-section__promo-title {
+    font-family: var(--font-family-title);
+    font-size: 24px;
+    color: var(--color-title);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.extra-section__text {
+    font-size: var(--font-size-p);
+    color: var(--color-text);
+    line-height: 1.5;
+}

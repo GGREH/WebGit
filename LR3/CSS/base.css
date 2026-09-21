@@ -1,0 +1,33 @@
+:root {
+    --width: 1440px;
+    --menu-width: 320px;
+    --right-width: 1120px;
+    
+    --color-bg-body: #dce7da;
+    --color-bg-container: #e9f0e6;
+    --color-bg-card: #f6faf4;
+    --color-bg-hover: #d3e4cf;
+    --color-border: #ffffff;
+    --color-border-subtle: #b6ccb2;
+    
+    --color-title: #253825;
+    --color-text: #415241;
+    --color-text-muted: #5e725e;
+    --color-accent: #375437;
+    
+    --font-family-title: 'Cormorant Infant', Georgia, serif;
+    --font-family-text: 'Cormorant Infant', Georgia, serif;
+    
+    --font-size-title: 38px;
+    --font-size-h2: 30px;
+    --font-size-menu: 22px;
+    --font-size-p: 19px;
+}
+
+body {
+    background-color: var(--color-bg-body);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-text);
+    color: var(--color-text);
+}

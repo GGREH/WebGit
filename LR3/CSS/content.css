@@ -1,0 +1,137 @@
+.content {
+    width: 100%;
+    background-color: var(--color-bg-container);
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 30px 40px;
+    border-bottom: 2px solid var(--color-border);
+    box-sizing: border-box;
+}
+
+.section__title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-h2);
+    color: var(--color-title);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.section__text {
+    font-size: var(--font-size-p);
+    line-height: 1.6;
+    color: var(--color-text);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.section--concert {
+    background: linear-gradient(rgba(233, 240, 230, 0.88), rgba(233, 240, 230, 0.88)),
+                url('../img/concert-bg.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.section--news {
+    background: linear-gradient(rgba(233, 240, 230, 0.9), rgba(233, 240, 230, 0.9)),
+                url('../img/news-bg.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.news-list {
+    font-size: 20px;
+    line-height: 1.6;
+    padding-left: 30px;
+}
+
+.news-list > li {
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+.news-sublist {
+    list-style-type: lower-alpha;
+    padding-left: 25px;
+    margin-top: 6px;
+}
+
+.news-sublist li {
+    font-size: 18px;
+    color: var(--color-text-muted);
+}
+
+.section--location {
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.card {
+    position: relative;
+    width: 260px;
+    height: 220px;
+    border: 2px solid var(--color-border);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__hover-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-hover);
+    border: 2px solid var(--color-border-subtle);
+    padding: 16px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--color-text);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card:hover .card__hover-text {
+    display: block;
+    animation: scale-in-center 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.card__hover-title {
+    font-family: var(--font-family-title);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--color-title);
+}
+
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.section--artist {
+    background: linear-gradient(rgba(233, 240, 230, 0.88), rgba(233, 240, 230, 0.88)),
+                url('../img/artist-bg.svg') no-repeat center center;
+    background-size: cover;
+}
