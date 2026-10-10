@@ -1,0 +1,113 @@
+.menu {
+    width: 100%;
+    background-color: var(--color-bg-container);
+    border-bottom: 2px solid var(--color-border);
+    padding: 12px 25px;
+    position: relative;
+    z-index: 50;
+    box-sizing: border-box;
+}
+
+/* Прихований чекбокс для гамбургер-меню */
+.menu-toggle {
+    display: none;
+}
+
+/* Кнопка гамбургер-меню (за замовчуванням прихована на десктопі) */
+.menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--border-radius-sm);
+    margin: 0 auto;
+    transition: var(--transition);
+}
+
+.menu-btn:hover {
+    background-color: var(--color-bg-hover);
+}
+
+/* Іконка гамбургера з трьох смужок */
+.menu-btn__icon,
+.menu-btn__icon::before,
+.menu-btn__icon::after {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background-color: var(--color-title);
+    border-radius: 2px;
+    transition: transform 0.3s ease, top 0.3s ease, background-color 0.3s ease;
+    content: '';
+}
+
+.menu-btn__icon {
+    position: relative;
+}
+
+.menu-btn__icon::before {
+    top: -7px;
+}
+
+.menu-btn__icon::after {
+    top: 7px;
+}
+
+/* Анімація гамбургера у хрестик при відкритті */
+.menu-toggle:checked + .menu-btn .menu-btn__icon {
+    background-color: transparent;
+}
+
+.menu-toggle:checked + .menu-btn .menu-btn__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-toggle:checked + .menu-btn .menu-btn__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* Список посилань навігації */
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 8px 12px;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.menu__item {
+    display: inline-block;
+}
+
+.menu__link {
+    display: inline-block;
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-menu);
+    color: var(--color-title);
+    font-weight: 600;
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.menu__link:hover,
+.menu__link:focus-visible {
+    background-color: var(--color-bg-hover);
+    border-color: var(--color-border-subtle);
+    color: #172617;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}

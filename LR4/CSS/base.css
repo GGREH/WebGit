@@ -1,0 +1,48 @@
+:root {
+    --max-width: 1400px;
+    --sidebar-width: 320px;
+    
+    --color-bg-body: #dce7da;
+    --color-bg-container: #e9f0e6;
+    --color-bg-card: #f6faf4;
+    --color-bg-hover: #d3e4cf;
+    --color-border: #ffffff;
+    --color-border-subtle: #b6ccb2;
+    
+    --color-title: #253825;
+    --color-text: #415241;
+    --color-text-muted: #5e725e;
+    --color-accent: #375437;
+    --color-accent-hover: #263c26;
+    --color-gold: #c89b3c;
+    --color-gold-bg: #fcf6e8;
+    
+    --font-family-title: 'Cormorant Infant', Georgia, serif;
+    --font-family-text: 'Cormorant Infant', Georgia, serif;
+    
+    --font-size-title: clamp(24px, 3.8vw, 38px);
+    --font-size-h2: clamp(22px, 3vw, 30px);
+    --font-size-h3: clamp(19px, 2.2vw, 24px);
+    --font-size-menu: 19px;
+    --font-size-p: clamp(16px, 1.4vw, 19px);
+
+    --border-radius-sm: 6px;
+    --border-radius-md: 10px;
+    --box-shadow: 0 4px 15px rgba(35, 52, 35, 0.08);
+    --box-shadow-hover: 0 8px 24px rgba(35, 52, 35, 0.15);
+    --transition: all 0.28s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-body);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-text);
+    color: var(--color-text);
+    font-size: var(--font-size-p);
+    line-height: 1.6;
+}

@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    background-color: var(--color-bg-container);
+    border-top: 2px solid var(--color-border);
+    padding: 28px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__contacts {
+    font-size: clamp(14px, 1.3vw, 17px);
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+.footer__copy {
+    font-weight: bold;
+    color: var(--color-title);
+    font-size: clamp(15px, 1.3vw, 18px);
+}
+
+.footer__note {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    font-style: italic;
+}

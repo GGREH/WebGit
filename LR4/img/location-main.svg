@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 230" width="100%" height="100%">
+  <rect width="260" height="230" fill="#ffffff" stroke="#c4d6c0" stroke-width="2"/>
+  <rect x="15" y="15" width="230" height="140" fill="#e4eee1" rx="4"/>
+  <ellipse cx="130" cy="130" rx="95" ry="22" fill="#ffffff" opacity="0.75"/>
+  <path d="M100 95 L130 65 L160 95 Z" fill="#3b573b"/>
+  <rect x="110" y="95" width="40" height="20" fill="#3b573b"/>
+  <text x="130" y="182" text-anchor="middle" fill="#253825" font-family="'Cormorant Infant', Georgia, serif" font-size="19" font-weight="bold">Велика Зала</text>
+  <text x="130" y="206" text-anchor="middle" fill="#526952" font-family="'Cormorant Infant', Georgia, serif" font-size="15">Головна філармонійна сцена</text>
+</svg>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import 'reset.css';
+@import 'base.css';
+@import 'header.css';
+@import 'menu.css';
+@import 'content.css';
+@import 'sidebar.css';
+@import 'sections.css';
+@import 'footer.css';
+@import 'media.css';
+
+/* ==========================================================================
+   ОСНОВНА СІТКА СТОРІНКИ (CSS Flexbox)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: var(--color-bg-container);
+    color: var(--color-text);
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-p);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border-left: 2px solid var(--color-border);
+    border-right: 2px solid var(--color-border);
+    box-shadow: 0 4px 25px rgba(35, 52, 35, 0.08);
+    box-sizing: border-box;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1 1 auto;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    flex: 1 1 auto;
+    width: calc(100% - 320px);
+    max-width: calc(100% - 320px);
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   УТИЛІТАРНІ КЛАСИ ДЛЯ РОБОТИ З FLEXBOX (За методичними вказівками ЛР№4)
+   ========================================================================== */
+.flex {
+    display: flex;
+    gap: 15px;
+}
+
+.flex_wrap {
+    flex-wrap: wrap;
+}
+
+.flex_align_center {
+    align-items: center;
+}
+
+.flex_justify_center {
+    justify-content: center;
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+.flex_justify_space {
+    justify-content: space-between;
+}

@@ -1,0 +1,203 @@
+/* ==========================================================================
+   МЕДІА-ЗАПИТИ ДЛЯ АДАПТИВНОСТІ (3 КЛЮЧОВІ КАТЕГОРІЇ ПРИСТРОЇВ)
+   1. Desktop: 1024px і більше
+   2. Tablet: 768px – 1023px
+   3. Mobile: до 767px (та екстра-малі екрани до 480px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ПЛАНШЕТИ (Tablet: 768px – 1023px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+    .container {
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    .content-wrapper {
+        width: calc(100% - 260px);
+        max-width: calc(100% - 260px);
+    }
+
+    .sidebar {
+        width: 260px;
+        min-width: 260px;
+        max-width: 260px;
+        flex: 0 0 260px;
+        padding: 22px 16px;
+    }
+
+    .header {
+        padding: 20px 20px;
+    }
+
+    .header__img {
+        width: 80px;
+        max-width: 80px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. СМАРТФОНИ / МОБІЛЬНІ ПРИСТРОЇ (Mobile: до 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+    /* Перебудова макету у вертикальну колонку */
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+        border-left: none;
+        border-top: 2px solid var(--color-border);
+        padding: 25px 18px;
+    }
+
+    /* Адаптація хедера */
+    .header {
+        padding: 18px 14px;
+        gap: 10px;
+    }
+
+    .header__img {
+        width: 60px;
+        max-width: 60px;
+    }
+
+    .header__subtitle {
+        display: none;
+    }
+
+    /* Гамбургер-меню */
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        gap: 6px;
+        transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+    }
+
+    .menu-toggle:checked ~ .menu__list {
+        max-height: 600px;
+        opacity: 1;
+        pointer-events: auto;
+        padding-top: 15px;
+    }
+
+    .menu__item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu__link {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border-subtle);
+    }
+
+    /* Сітки переходять в 1 колонку */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        aspect-ratio: 260 / 230;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. ЕКСТРА-МАЛІ ЕКРАНИ (Small Mobile: до 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__img {
+        display: inline-block;
+        width: 50px;
+        margin: 0 auto;
+    }
+
+    .header__img--right {
+        display: none;
+    }
+
+    .section {
+        padding: 20px 14px;
+    }
+
+    .pricing-table thead th,
+    .pricing-table tbody td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 20px 14px;
+    }
+}

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симфонія Світла | Лабораторна робота №4 (Адаптивна верстка та семантичні теги)</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ==================================================================
+             СЕМАНТИЧНИЙ ХЕДЕР СТОРІНКИ (<header>)
+             ================================================================== -->
+        <header class="header">
+            <img src="img/header-left.svg" alt="Музична емблема ліворуч" class="header__img header__img--left">
+            <div class="header__content">
+                <h1 class="header__title">Мої вітання усім шанувальникам класичної музики</h1>
+                <p class="header__subtitle">Національна філармонія • Урочистий симфонічний концерт «Симфонія Світла»</p>
+            </div>
+            <img src="img/header-right.svg" alt="Музична емблема праворуч" class="header__img header__img--right">
+        </header>
+
+        <!-- ==================================================================
+             СЕМАНТИЧНА НАВІГАЦІЯ (<nav>) З АДАПТИВНИМ ГАМБУРГЕР-МЕНЮ
+             ================================================================== -->
+        <nav class="menu" aria-label="Головне меню сайту">
+            <!-- Чекбокс та кнопка для згортання у гамбургер на мобільних пристроях -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Перемикач меню">
+            <label for="menu-toggle" class="menu-btn" title="Меню навігації">
+                <span class="menu-btn__icon"></span>
+            </label>
+
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#concert" class="menu__link">Про концерт</a></li>
+                <li class="menu__item"><a href="#news" class="menu__link">Новини</a></li>
+                <li class="menu__item"><a href="#location" class="menu__link">Зали комплексу</a></li>
+                <li class="menu__item"><a href="#artist" class="menu__link">Про диригента</a></li>
+                <li class="menu__item"><a href="#gallery" class="menu__link">Галерея інструментів</a></li>
+                <li class="menu__item"><a href="#team" class="menu__link">Солісти</a></li>
+                <li class="menu__item"><a href="#stats" class="menu__link">Статистика</a></li>
+                <li class="menu__item"><a href="#reviews" class="menu__link">Відгуки</a></li>
+                <li class="menu__item"><a href="#pricing" class="menu__link">Квитки</a></li>
+                <li class="menu__item"><a href="#faq" class="menu__link">FAQ</a></li>
+                <li class="menu__item"><a href="#booking" class="menu__link">Бронювання</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==================================================================
+             ГОЛОВНИЙ МАКЕТ: ОСНОВНИЙ КОНТЕНТ ТА БІЧНА ПАНЕЛЬ (<main> + <aside>)
+             ================================================================== -->
+        <div class="main-layout">
+
+            <!-- ОСНОВНИЙ ВМІСТ (<main>) -->
+            <main class="content-wrapper">
+                <article class="content">
+
+                    <!-- СЕКЦІЯ 1: ПРО КОНЦЕРТ -->
+                    <section id="concert" class="section section--concert">
+                        <h2 class="section__title">Інформація про концерт</h2>
+                        <p class="section__text">
+                            Визначення «симфонічний концерт» століттями викликало трепетне ставлення серед поціновувачів музики. Це свято звуку, яке об'єднує класичну гармонію та сучасну експресію. Якщо ми поглянемо на історію оркестрового мистецтва, то побачимо, як поступово народжувалися ці безсмертні мелодії. Концерт «Симфонія Світла» покликаний відкрити слухачам нові грані знайомих шедеврів.
+                        </p>
+                        <p class="section__text">
+                            У програмі урочистого вечора прозвучать як драматичні пасажі світових класиків, так і авторські аранжування саундтреків сучасного кінематографа. Понад 70 інструментів одночасно створять неповторну звукову палітру під склепінням зали.
+                        </p>
+                    </section>
+
+                    <!-- СЕКЦІЯ 2: НОВИНИ КУЛЬТУРНОГО ЖИТТЯ -->
+                    <section id="news" class="section section--news">
+                        <h2 class="section__title">Новини культурного життя</h2>
+                        <ul class="news-list">
+                            <li>
+                                Відкриття 98-го концертного сезону:
+                                <ul class="news-sublist">
+                                    <li>Прем'єра нової симфонічної сюїти «Відродження»</li>
+                                    <li>Виступ запрошених солістів із Віденської філармонії</li>
+                                    <li>Серія вечірніх акустичних концертів при свічках</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Благодійний мистецький проєкт «Музика заради перемоги та надії».
+                            </li>
+                            <li>
+                                Встановлення інноваційного освітлення сцени та сучасних мікрофонів студійного класу.
+                            </li>
+                            <li>
+                                Безкоштовні майстер-класи для молодих виконавців від провідних майстрів сцени.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- СЕКЦІЯ 3: ЗАЛИ КОМПЛЕКСУ (ІНТЕРАКТИВНІ КАРТКИ) -->
+                    <section id="location" class="section section--location">
+                        <h2 class="section__title">Сторінка із розташуванням</h2>
+                        <p class="section__subtitle">
+                            План розташування залів комплексу (наведіть курсор на картку зали):
+                        </p>
+                        <div class="cards-container">
+                            
+                            <div class="card">
+                                <img src="img/location-main.svg" alt="Велика Зала" class="card__image">
+                                <div class="card__hover-text">
+                                    <h3 class="card__hover-title">Велика Зала</h3>
+                                    <p>
+                                        Головна сцена на 1200 місць. Призначена для масштабних симфонічних полотен, хору та урочистих концертів.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/location-chamber.svg" alt="Камерна Зала" class="card__image">
+                                <div class="card__hover-text">
+                                    <h3 class="card__hover-title">Камерна Зала</h3>
+                                    <p>
+                                        Затишний простір на 350 слухачів з унікальною природною акустикою для скрипкових та фортепіанних вечорів.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="img/location-lounge.svg" alt="Літня Сцена" class="card__image">
+                                <div class="card__hover-text">
+                                    <h3 class="card__hover-title">Літня Сцена</h3>
+                                    <p>
+                                        Відкритий парковий майданчик для виступів під зорями в теплу пору року. Свіже повітря та приємна атмосфера.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- СЕКЦІЯ 4: ІНФОРМАЦІЯ ПРО ВИКОНАВЦЯ -->
+                    <section id="artist" class="section section--artist">
+                        <h2 class="section__title">Інформація про виконавця</h2>
+                        <p class="section__text">
+                            Багатьом слухачам може здатися дивовижним той факт, що за кожним бездоганним виконанням стоять сотні годин репетицій та натхненної праці диригента. Головний диригент оркестру — народний артист, лауреат міжнародних конкурсів, який керував виступами у найвідоміших залах Європи.
+                        </p>
+                        <p class="section__text">
+                            Його манера диригування вирізняється особливою пристрастю та тонким відчуттям темпу. Разом з оркестром вони створюють справжнє диво, де кожен звук торкається найглибших струн людської душі.
+                        </p>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 1: АДАПТИВНА ГАЛЕРЕЯ / МЕДІА-КАРТКИ (1 бал)
+                         ========================================================== -->
+                    <section id="gallery" class="section section--gallery">
+                        <h2 class="section__title">Адаптивна галерея інструментів</h2>
+                        <p class="section__subtitle">
+                            Шедеври інструментарію та сольні партії оркестру «Симфонія Світла» (CSS Grid сітка)
+                        </p>
+                        <div class="gallery-grid">
+                            
+                            <article class="gallery-card">
+                                <div class="gallery-card__img-wrap">
+                                    <img src="img/inst-violin.svg" alt="Концертна скрипка" class="gallery-card__img">
+                                    <span class="gallery-card__badge">Струнні</span>
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Концертна скрипка</h3>
+                                    <p class="gallery-card__desc">
+                                        Серце оркестру, що веде основну мелодичну лінію з неперевершеною експресією та віртуозними пасажами.
+                                    </p>
+                                    <span class="gallery-card__tag">Майстерня Кремони • 1782 р.</span>
+                                </div>
+                            </article>
+
+                            <article class="gallery-card">
+                                <div class="gallery-card__img-wrap">
+                                    <img src="img/inst-piano.svg" alt="Рояль Steinway & Sons" class="gallery-card__img">
+                                    <span class="gallery-card__badge">Клавішні</span>
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Рояль Steinway & Sons</h3>
+                                    <p class="gallery-card__desc">
+                                        Флагманський інструмент великої сцени з кришталевим верхом та могутнім басовим резонансом.
+                                    </p>
+                                    <span class="gallery-card__tag">Модель D-274 • Концертний гранд</span>
+                                </div>
+                            </article>
+
+                            <article class="gallery-card">
+                                <div class="gallery-card__img-wrap">
+                                    <img src="img/inst-cello.svg" alt="Майстерна віолончель" class="gallery-card__img">
+                                    <span class="gallery-card__badge">Струнні</span>
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Майстерна віолончель</h3>
+                                    <p class="gallery-card__desc">
+                                        Глибокий оксамитовий тембр, що наповнює симфонію драматизмом, теплом та проникливим звучанням.
+                                    </p>
+                                    <span class="gallery-card__tag">Низький регістр • 8 сольних партій</span>
+                                </div>
+                            </article>
+
+                            <article class="gallery-card">
+                                <div class="gallery-card__img-wrap">
+                                    <img src="img/inst-flute.svg" alt="Срібна флейта" class="gallery-card__img">
+                                    <span class="gallery-card__badge">Дерев'яні духові</span>
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Срібна флейта</h3>
+                                    <p class="gallery-card__desc">
+                                        Легкі, повітряні та прозорі інтонації, які створюють магічний настрій у ліричних частинах сюїти.
+                                    </p>
+                                    <span class="gallery-card__tag">Срібло 925 проби • Французька система</span>
+                                </div>
+                            </article>
+
+                            <article class="gallery-card">
+                                <div class="gallery-card__img-wrap">
+                                    <img src="img/inst-harp.svg" alt="Велика концертна арфа" class="gallery-card__img">
+                                    <span class="gallery-card__badge">Щипкові</span>
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Велика концертна арфа</h3>
+                                    <p class="gallery-card__desc">
+                                        47 струн каскадних пасажів, що додають музичному полотну казкового блиску та витонченості.
+                                    </p>
+                                    <span class="gallery-card__tag">Педальна арфа • 7 октав</span>
+                                </div>
+                            </article>
+
+                            <article class="gallery-card">
+                                <div class="gallery-card__img-wrap">
+                                    <img src="img/inst-horn.svg" alt="Оркестрова валторна" class="gallery-card__img">
+                                    <span class="gallery-card__badge">Мідні духові</span>
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Оркестрова валторна</h3>
+                                    <p class="gallery-card__desc">
+                                        Благородний м'який звук міді, що з'єднує духову та струнну групи у величні героїчні кульмінації.
+                                    </p>
+                                    <span class="gallery-card__tag">Подвійна валторна F/Bb</span>
+                                </div>
+                            </article>
+
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 2: КОМАНДА / ЕКСПЕРТИ ТА СОЛІСТИ (1 бал)
+                         ========================================================== -->
+                    <section id="team" class="section section--team">
+                        <h2 class="section__title">Команда та солісти програми</h2>
+                        <p class="section__subtitle">
+                            Видатні музиканти, які творять магію урочистого концерту
+                        </p>
+                        <div class="team-grid">
+
+                            <div class="team-card">
+                                <img src="img/team-conductor.svg" alt="Маестро Володимир Лисенко" class="team-card__avatar">
+                                <h3 class="team-card__name">Володимир Лисенко</h3>
+                                <span class="team-card__role">Головний диригент</span>
+                                <p class="team-card__bio">
+                                    Народний артист України, запрошений диригент Віденської опери. Понад 25 років веде провідні оркестри світу до тріумфу.
+                                </p>
+                                <ul class="team-card__socials">
+                                    <li><a href="#team" class="team-card__social-link" title="Facebook">f</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="Instagram">in</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="YouTube">yt</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="team-card">
+                                <img src="img/team-violin.svg" alt="Олена Ковальська" class="team-card__avatar">
+                                <h3 class="team-card__name">Олена Ковальська</h3>
+                                <span class="team-card__role">Перша скрипка</span>
+                                <p class="team-card__bio">
+                                    Концертмейстер оркестру, лауреатка міжнародного конкурсу ім. Паганіні. Віртуозно веде партію перших скрипок.
+                                </p>
+                                <ul class="team-card__socials">
+                                    <li><a href="#team" class="team-card__social-link" title="Facebook">f</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="Instagram">in</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="YouTube">yt</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="team-card">
+                                <img src="img/team-piano.svg" alt="Максим Мельник" class="team-card__avatar">
+                                <h3 class="team-card__name">Максим Мельник</h3>
+                                <span class="team-card__role">Соліст фортепіано</span>
+                                <p class="team-card__bio">
+                                    Запрошений соліст, випускник Королівської академії музики Лондона. Виконує центральний концерт для фортепіано з оркестром.
+                                </p>
+                                <ul class="team-card__socials">
+                                    <li><a href="#team" class="team-card__social-link" title="Facebook">f</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="Instagram">in</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="YouTube">yt</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="team-card">
+                                <img src="img/team-soprano.svg" alt="Анна Дорошенко" class="team-card__avatar">
+                                <h3 class="team-card__name">Анна Дорошенко</h3>
+                                <span class="team-card__role">Прима сопрано</span>
+                                <p class="team-card__bio">
+                                    Золотий голос української академічної сцени, виконує сольні вокальні партії у прем'єрній симфонічній сюїті.
+                                </p>
+                                <ul class="team-card__socials">
+                                    <li><a href="#team" class="team-card__social-link" title="Facebook">f</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="Instagram">in</a></li>
+                                    <li><a href="#team" class="team-card__social-link" title="YouTube">yt</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 3: СТАТИСТИКА ТА МЕТРИКИ (1 бал)
+                         ========================================================== -->
+                    <section id="stats" class="section section--stats">
+                        <h2 class="section__title">Статистика та метрики концерту</h2>
+                        <p class="section__subtitle">
+                            Ключові показники філармонічного сезону з використанням семантичних тегів progress та meter
+                        </p>
+                        <div class="stats-grid">
+
+                            <div class="stat-card">
+                                <div>
+                                    <div class="stat-card__number">72</div>
+                                    <div class="stat-card__label">Музиканти оркестру</div>
+                                    <p class="stat-card__desc">Склад оркестру на сцені під час виконання</p>
+                                </div>
+                                <div>
+                                    <progress value="72" max="80" title="Заповненість партитури"></progress>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div>
+                                    <div class="stat-card__number">96%</div>
+                                    <div class="stat-card__label">Акустичний баланс</div>
+                                    <p class="stat-card__desc">Рівень чистоти звуку та реверберації зали</p>
+                                </div>
+                                <div>
+                                    <meter min="0" max="100" low="30" high="90" optimum="95" value="96" title="Акустичний показник"></meter>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div>
+                                    <div class="stat-card__number">100%</div>
+                                    <div class="stat-card__label">Заповненість зали</div>
+                                    <p class="stat-card__desc">Кількість заброньованих місць на прем'єру</p>
+                                </div>
+                                <div>
+                                    <progress value="1200" max="1200" title="1200 з 1200 місць"></progress>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div>
+                                    <div class="stat-card__number">98-й</div>
+                                    <div class="stat-card__label">Концертний сезон</div>
+                                    <p class="stat-card__desc">Років неперервних філармонійних традицій</p>
+                                </div>
+                                <div>
+                                    <meter min="0" max="100" value="98" title="98-й сезон"></meter>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 4: ВІДГУКИ СЛУХАЧІВ ТА КРИТИКІВ (1 бал)
+                         ========================================================== -->
+                    <section id="reviews" class="section section--reviews">
+                        <h2 class="section__title">Відгуки слухачів та критиків</h2>
+                        <p class="section__subtitle">
+                            Враження глядачів та оцінки музичних оглядачів після генеральної репетиції
+                        </p>
+                        <div class="reviews-grid">
+
+                            <div class="review-card">
+                                <div class="review-card__stars">★★★★★</div>
+                                <blockquote class="review-card__quote">
+                                    «"Симфонія Світла" — це феноменальний симбіоз класичної вивіреності та сучасної емоційної глибини. Звучання Великої зали перевершує всі очікування!»
+                                </blockquote>
+                                <div class="review-card__author-box">
+                                    <img src="img/avatar-1.svg" alt="Андрій Василенко" class="review-card__avatar">
+                                    <div>
+                                        <div class="review-card__name">Андрій Василенко</div>
+                                        <div class="review-card__status">Головний редактор журналу «Музика UA»</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-card__stars">★★★★★</div>
+                                <blockquote class="review-card__quote">
+                                    «Неймовірна чуйність диригента до кожної інтонації. Соло на роялі просто зупинило подих у всій залі на 1200 слухачів. Обов'язково завітаємо знову!»
+                                </blockquote>
+                                <div class="review-card__author-box">
+                                    <img src="img/avatar-2.svg" alt="Катерина Бойко" class="review-card__avatar">
+                                    <div>
+                                        <div class="review-card__name">Катерина Бойко</div>
+                                        <div class="review-card__status">Постійна відвідувачка абонементних циклів</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-card__stars">★★★★★</div>
+                                <blockquote class="review-card__quote">
+                                    «Акустика оновленої сцени вражає: чітко розпізнається кожен інструмент від найтоншої флейти пікколо до контрабасових хвиль. Зразок європейського рівня.»
+                                </blockquote>
+                                <div class="review-card__author-box">
+                                    <img src="img/avatar-3.svg" alt="Проф. Сергій Яковенко" class="review-card__avatar">
+                                    <div>
+                                        <div class="review-card__name">Сергій Яковенко</div>
+                                        <div class="review-card__status">Професор Національної музичної академії</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 5: ПОРІВНЯЛЬНА ТАБЛИЦЯ КВИТКІВ (<table>) (0.5 бала)
+                         ========================================================== -->
+                    <section id="pricing" class="section section--pricing">
+                        <h2 class="section__title">Категорії квитків та прайс-лист</h2>
+                        <p class="section__subtitle">
+                            Семантична порівняльна таблиця характеристик глядацьких секторів (з адаптивною прокруткою)
+                        </p>
+                        <div class="table-responsive">
+                            <table class="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Сектор зали</th>
+                                        <th>Видимість сцени</th>
+                                        <th>Акустичний ефект</th>
+                                        <th>Програмка вечора</th>
+                                        <th>Ціна квитка</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Партер (Ряди 1–8)</td>
+                                        <td>Максимальна (ефект присутності)</td>
+                                        <td>Потужний прямий звук</td>
+                                        <td>Включено (Глянець)</td>
+                                        <td class="price-val">1200 ₴</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Амфітеатр (Ряди 9–18)</td>
+                                        <td>Панорамна (оптимальний огляд)</td>
+                                        <td>Ідеальний акустичний фокус</td>
+                                        <td>Включено</td>
+                                        <td class="price-val">950 ₴</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Бельєтаж та Царські Ложі</td>
+                                        <td>Преміальна висотна перспектива</td>
+                                        <td>М'яке об'ємне відлуння</td>
+                                        <td>Включено + Напої</td>
+                                        <td class="price-val">1500 ₴</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Балкон 1-го ярусу</td>
+                                        <td>Повний огляд оркестрової ями</td>
+                                        <td>Чудове просторове звучання</td>
+                                        <td>Електронна версія</td>
+                                        <td class="price-val">600 ₴</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Студентські місця (Балкон 2-й)</td>
+                                        <td>Оглядова зона</td>
+                                        <td>Гарна загальна чутність</td>
+                                        <td>За запитом</td>
+                                        <td class="price-val">350 ₴</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 6: ЧАСТІ ЗАПИТАННЯ (FAQ) (<details> / <summary>) (0.5 бала)
+                         ========================================================== -->
+                    <section id="faq" class="section section--faq">
+                        <h2 class="section__title">Часті запитання (FAQ)</h2>
+                        <p class="section__subtitle">
+                            Корисна інформація для відвідувачів концерту «Симфонія Світла»
+                        </p>
+                        <div class="faq-list">
+
+                            <details class="faq-item" open>
+                                <summary>Який дрес-код діє у філармонії?</summary>
+                                <div class="faq-content">
+                                    Для вечірніх симфонічних концертів рекомендовано стиль Smart Casual або вечірнє вбрання. Ми просимо утриматися від спортивного одягу та шортів.
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>Чи можна відвідувати концерт із дітьми?</summary>
+                                <div class="faq-content">
+                                    Віковий ценз для вечірньої програми становить 6+. Для наймолодших слухачів ми проводимо спеціальні ранкові інтерактивні концерти вихідного дня.
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>Чи дозволено проводити фото- та відеозйомку?</summary>
+                                <div class="faq-content">
+                                    Фото- та відеозйомка під час виконання творів заборонена, щоб не відволікати оркестр та інших глядачів. Зробити пам'ятні фото можна в антракті та у фоє.
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary>Як обміняти або повернути електронний квиток?</summary>
+                                <div class="faq-content">
+                                    Повернення або обмін здійснюється в онлайн-кабінеті або за телефоном гарячої лінії не пізніше ніж за 24 години до початку виступу.
+                                </div>
+                            </details>
+
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                         НОВА СЕКЦІЯ 7: ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ ТА БРОНЮВАННЯ (<form>) (1 бал)
+                         ========================================================== -->
+                    <section id="booking" class="section section--booking">
+                        <h2 class="section__title">Форма зворотного зв’язку та бронювання</h2>
+                        <p class="section__subtitle">
+                            Заповніть заявку для резервування квитків або отримання консультації адміністратора
+                        </p>
+
+                        <form action="#" method="POST" class="booking-form">
+                            <div class="form-grid">
+                                
+                                <!-- Поле 1: Текстове ім'я (required, pattern, minlength, maxlength, title) -->
+                                <div class="form-group">
+                                    <label for="user-name" class="form-label">Ваше ім'я та прізвище *</label>
+                                    <input type="text" id="user-name" name="name" class="form-input" 
+                                           placeholder="Наприклад: Олександр Коваленко" 
+                                           required minlength="3" maxlength="50" 
+                                           pattern="^[A-Za-zА-Яа-яІіЇїЄєҐґ'\s\-]+$" 
+                                           title="Введіть від 3 до 50 літер (дозволені літери, пробіли, апостроф та дефіс)">
+                                </div>
+
+                                <!-- Поле 2: Email (required, minlength, maxlength, title) -->
+                                <div class="form-group">
+                                    <label for="user-email" class="form-label">Електронна пошта *</label>
+                                    <input type="email" id="user-email" name="email" class="form-input" 
+                                           placeholder="example@mail.ua" 
+                                           required minlength="5" maxlength="100"
+                                           title="Введіть коректну адресу електронної пошти (наприклад, user@example.com)">
+                                </div>
+
+                                <!-- Поле 3: Телефон (required, pattern, title) -->
+                                <div class="form-group">
+                                    <label for="user-phone" class="form-label">Контактний телефон *</label>
+                                    <input type="tel" id="user-phone" name="phone" class="form-input" 
+                                           placeholder="+380XXXXXXXXX" 
+                                           pattern="^\+380\d{9}$" 
+                                           required 
+                                           title="Формат: +380XXXXXXXXX (знак +, код 380 та 9 цифр номера)">
+                                </div>
+
+                                <!-- Поле 4: Селектор зали (select, required, title) -->
+                                <div class="form-group">
+                                    <label for="hall-select" class="form-label">Бажана зала або сектор *</label>
+                                    <select id="hall-select" name="hall" class="form-select" required title="Оберіть сектор або залу зі списку">
+                                        <option value="" disabled selected>Оберіть сектор зали...</option>
+                                        <option value="main-parter">Велика Зала — Партер</option>
+                                        <option value="main-amphi">Велика Зала — Амфітеатр</option>
+                                        <option value="main-lodge">Велика Зала — Бельєтаж та Ложі</option>
+                                        <option value="chamber">Камерна Зала</option>
+                                        <option value="lounge">Літня Сцена (Партер)</option>
+                                    </select>
+                                </div>
+
+                                <!-- Поле 5: Кількість квитків (number, min, max, step, required, title) -->
+                                <div class="form-group">
+                                    <label for="ticket-count" class="form-label">Кількість квитків (1-10) *</label>
+                                    <input type="number" id="ticket-count" name="tickets" class="form-input" 
+                                           min="1" max="10" step="1" value="2" required 
+                                           title="Кількість квитків повинна бути цілим числом від 1 до 10">
+                                </div>
+
+                                <!-- Поле 6: Текстова область побажань (textarea, maxlength) -->
+                                <div class="form-group form-group--full">
+                                    <label for="user-comment" class="form-label">Особливі побажання до місць / Коментар</label>
+                                    <textarea id="user-comment" name="comment" class="form-textarea" 
+                                              rows="3" maxlength="500" placeholder="Вкажіть побажання щодо конкретного ряду або супроводу..."></textarea>
+                                </div>
+
+                                <!-- Поле 7: Чекбокс згоди (checkbox, required, title) -->
+                                <div class="form-group form-group--full">
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" id="user-agree" name="agree" class="form-checkbox" required title="Необхідно підтвердити згоду для оформлення замовлення">
+                                        <span>Я погоджуюся з правилами відвідування філармонії та обробкою персональних даних *</span>
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <!-- Кнопки керування формою -->
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn--primary">Забронювати квитки</button>
+                                <button type="reset" class="btn btn--secondary">Очистити поля</button>
+                            </div>
+                        </form>
+                    </section>
+
+                </article>
+            </main>
+
+            <!-- ==============================================================
+                 СЕМАНТИЧНА БІЧНА ПАНЕЛЬ (<aside>)
+                 ============================================================== -->
+            <aside class="sidebar">
+
+                <div class="sidebar__card sidebar__card--promo">
+                    <h3 class="sidebar__title">Спеціальна пропозиція</h3>
+                    <p class="sidebar__text">
+                        Придбайте сезонний абонемент «Філармонія-Преміум» на 5 концертів до кінця місяця та отримайте гарантовану знижку 25% і безкоштовну програму заходу!
+                    </p>
+                    <div style="text-align: center;">
+                        <span class="sidebar__badge">Знижка -25%</span>
+                    </div>
+                </div>
+
+                <div class="sidebar__card">
+                    <h3 class="sidebar__title">Афіша подій</h3>
+                    <ul class="sidebar__schedule-list">
+                        <li class="sidebar__schedule-item">
+                            <span class="sidebar__schedule-date">15 Жовтня, 19:00</span>
+                            <strong>Прем'єра «Симфонія Світла»</strong>
+                            <span>Велика Зала оркестру</span>
+                        </li>
+                        <li class="sidebar__schedule-item">
+                            <span class="sidebar__schedule-date">22 Жовтня, 18:30</span>
+                            <strong>Магія барокової скрипки</strong>
+                            <span>Камерна Зала</span>
+                        </li>
+                        <li class="sidebar__schedule-item">
+                            <span class="sidebar__schedule-date">29 Жовтня, 19:00</span>
+                            <strong>Вечір кіносаундтреків</strong>
+                            <span>Велика Зала</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar__card">
+                    <h3 class="sidebar__title">Акустична довідка</h3>
+                    <p class="sidebar__text">
+                        Стіни Великої зали оздоблені природним акустичним деревом бука, що забезпечує коефіцієнт реверберації 1.85 секунди — еталон для виконання симфонічних полотен світового рівня.
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <!-- ==================================================================
+             СЕМАНТИЧНИЙ ФУТЕР СТОРІНКИ (<footer>)
+             ================================================================== -->
+        <footer class="footer">
+            <p class="footer__contacts">
+                Контактна інформація: м. Київ, вул. Хрещатик, 22 | Телефон каси: +38 (044) 279-00-11 | Email: info@music-culture.ua
+            </p>
+            <p class="footer__copy">
+                &copy; 2026 Роман Мамон • Лабораторна робота №4 (Адаптивна верстка та семантичні теги)
+            </p>
+            <p class="footer__note">
+                Розроблено відповідно до вимог HTML5 Semantics, CSS Grid, Flexbox та Responsive Breakpoints.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

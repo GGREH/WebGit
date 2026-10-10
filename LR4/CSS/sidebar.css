@@ -1,0 +1,97 @@
+.sidebar {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    flex: 0 0 320px;
+    background-color: var(--color-bg-container);
+    border-left: 2px solid var(--color-border);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.sidebar__card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--border-radius-md);
+    padding: 20px 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.sidebar__card:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateY(-2px);
+}
+
+.sidebar__card--promo {
+    border: 2px dashed var(--color-accent);
+    background-color: var(--color-gold-bg);
+}
+
+.sidebar__title {
+    font-family: var(--font-family-title);
+    font-size: 22px;
+    color: var(--color-title);
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+.sidebar__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text);
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+.sidebar__text:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar__schedule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar__schedule-item {
+    font-size: 15px;
+    padding: 8px 10px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar__schedule-date {
+    font-weight: bold;
+    color: var(--color-accent);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar__badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: center;
+}
