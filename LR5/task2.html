@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 - Завдання 2</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <main class="b-main">
+        <header class="b-header">
+            <h1>Лабораторна робота №5 .Javascript</h1>
+            <h2>Виконав студент групи АнД-31 Мамон Роман Дмитрович</h2>
+            <p style="margin-top: 5px; font-size: 15px;">Завдання 2 | Варіант 6</p>
+        </header>
+
+        <!-- Навігація між сторінками -->
+        <nav class="b-nav">
+            <a href="index.html">Головна сторінка</a>
+            <a href="task1.html">Завдання 1 (Кіноафіша)</a>
+            <a href="task2.html" class="active">Завдання 2 (DOM та таблиця)</a>
+        </nav>
+
+        <!-- ==========================================
+             ЗАВДАННЯ 2.1
+             ========================================== -->
+        <h2>Завдання 2.1</h2>
+        <div class="b-div-zadanie">
+            <b>Умова (Варіант 6):</b> На сторінці є блоки <code>div</code>, які містять текст. Обійдіть всі блоки <code>div</code> і сформуйте список, елементами якого буде вміст блоків.
+        </div>
+
+        <p><b>Вихідні текстові блоки:</b></p>
+        <div class="source-block">Блок 1: Модель DOM представляє HTML-документ у вигляді дерева вузлів.</div>
+        <div class="source-block">Блок 2: Кожен HTML-тег стає окремим вузлом-елементом дерева документа.</div>
+        <div class="source-block">Блок 3: Властивість textContent дозволяє зчитувати чистий текст всередині елемента.</div>
+
+        <button class="b-button" onclick="div_to_list()">Сформувати список</button>
+
+        <div id="result_task2_1"></div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc;">
+
+        <!-- ==========================================
+             ЗАВДАННЯ 2.2
+             ========================================== -->
+        <h2>Завдання 2.2</h2>
+        <div class="b-div-zadanie">
+            <b>Умова (Варіант 6):</b> Дана таблиця з числами. При натисканні на кнопку необхідно виокремити кольорами всі додатні та від’ємні числа. Окремо позначити максимальні та мінімальні значення серед додатних та від’ємних.
+        </div>
+
+        <p><b>Таблиця чисел:</b></p>
+        <table id="table1" class="matrix-tbl">
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>-2</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>-2</td>
+                <td>5</td>
+                <td>-12</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>31</td>
+                <td>-32</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>222</td>
+                <td>13</td>
+                <td>-12</td>
+                <td>110</td>
+            </tr>
+        </table>
+
+        <button class="b-button" onclick="table_obrab()">Обробити таблицю (Варіант 6)</button>
+        <button class="b-button b-button-secondary" onclick="col_sums()">Суми по стовпцях (Варіант 3)</button>
+
+        <div id="result_task2_2"></div>
+    </main>
+
+    <script src="JS/task2.js"></script>
+</body>
+</html>

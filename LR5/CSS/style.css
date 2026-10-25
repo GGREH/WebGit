@@ -1,0 +1,159 @@
+/* Основні стилі сторінки у стилі методичних вказівок */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.b-main {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Шапка */
+.b-header {
+    text-align: center;
+    background: #4a76a8;
+    color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.b-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.b-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Меню навігації між сторінками */
+.b-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #4a76a8;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.b-nav a {
+    text-decoration: none;
+    color: #4a76a8;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid #4a76a8;
+    border-radius: 4px;
+    background: #f8fafc;
+}
+
+.b-nav a:hover, .b-nav a.active {
+    background: #4a76a8;
+    color: #ffffff;
+}
+
+/* Блок опису завдання */
+.b-div-zadanie {
+    background: #f9fbfd;
+    border-left: 4px solid #4a76a8;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.b-div-zadanie h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Кнопки */
+.b-button {
+    background-color: #4a76a8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 5px 10px 0;
+}
+
+.b-button:hover {
+    background-color: #3b618c;
+}
+
+.b-button-secondary {
+    background-color: #6c757d;
+}
+
+.b-button-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Блок результатів */
+#rezult, #result_task2_1, #result_task2_2 {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Таблиці */
+.b-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.b-table th, .b-table td {
+    border: 1px solid #b0bec5;
+    padding: 10px;
+    text-align: left;
+}
+
+.b-table th {
+    background-color: #dfe6e9;
+    font-weight: bold;
+}
+
+/* Таблиця-матриця для Завдання 2.2 */
+.matrix-tbl {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.matrix-tbl td {
+    width: 55px;
+    height: 45px;
+    border: 1px solid #333;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+/* Блоки div для Завдання 2.1 */
+.source-block {
+    background-color: #f1f3f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+/* Повідомлення про 1 зал */
+.single-hall-note {
+    color: #d35400;
+    font-style: italic;
+    font-size: 13px;
+}

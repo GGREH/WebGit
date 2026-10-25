@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 - Завдання 1</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <main class="b-main">
+        <header class="b-header">
+            <h1>Лабораторна робота №5 .Javascript</h1>
+            <h2>Виконав студент групи АнД-31 Мамон Роман Дмитрович</h2>
+            <p style="margin-top: 5px; font-size: 15px;">Завдання 1 | Варіант 6</p>
+        </header>
+
+        <!-- Навігація між сторінками -->
+        <nav class="b-nav">
+            <a href="index.html">Головна сторінка</a>
+            <a href="task1.html" class="active">Завдання 1 (Кіноафіша)</a>
+            <a href="task2.html">Завдання 2 (DOM та таблиця)</a>
+        </nav>
+
+        <h2>Завдання на лабораторну роботу</h2>
+        <div class="b-div-zadanie">
+            Створити масиви значень:
+            <br>− назва кінофільму;
+            <br>− кінотеатр;
+            <br>− зал (допускається пусте значення);
+            <br>− сеанс.
+            <br><br>
+            Кожен кінофільм демонструється у кінотеатрі протягом 10 днів. Вивести інформацію, скільки днів залишилося до кожного з фільмів, який(і) фільми йдуть у кінотеатрах сьогодні, скільки днів залишилось до завершення показу. Якщо не вказаний зал, вивести додаткове повідомлення, що в кінотеатрі лише один зал.
+        </div>
+
+        <button class="b-button" onclick="ras()">Перевірити афішу</button>
+
+        <h2>Результат виконання:</h2>
+        <div id="rezult">
+            <p style="color: #777;"><i>Натисніть кнопку вище, щоб завантажити та опрацювати дані афіші...</i></p>
+        </div>
+    </main>
+
+    <script src="JS/task1.js"></script>
+</body>
+</html>
