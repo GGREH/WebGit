@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Звіт з лабораторної роботи №5 - Мамон Р.Д.</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 25mm; /* Academic margins: left 25mm, right 15mm, top 20mm, bottom 20mm */
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14pt;
+            line-height: 1.35;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        /* Сторінки звіту */
+        .page {
+            page-break-after: always;
+            min-height: 250mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        /* ========================================================
+           ТИТУЛЬНА СТОРІНКА
+           ======================================================== */
+        .title-page {
+            text-align: center;
+            justify-content: space-between;
+            min-height: 245mm;
+        }
+
+        .univ-header {
+            font-size: 13.5pt;
+            font-weight: bold;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .univ-header p {
+            margin: 4px 0;
+        }
+
+        .title-middle {
+            margin: auto 0;
+            padding: 40px 0 20px 0;
+        }
+
+        .title-middle h1 {
+            font-size: 18pt;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+
+        .title-middle .sub-discipline {
+            font-size: 14pt;
+            margin: 0 0 10px 0;
+        }
+
+        .title-middle .topic {
+            font-size: 14pt;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+        }
+
+        .title-middle .variant {
+            font-size: 15pt;
+            font-weight: bold;
+            margin: 15px 0 0 0;
+        }
+
+        .title-meta-block {
+            display: flex;
+            justify-content: flex-end;
+            text-align: left;
+            margin: 30px 40px 60px 0;
+        }
+
+        .title-meta-content {
+            font-size: 14pt;
+            line-height: 1.4;
+        }
+
+        .title-meta-content p {
+            margin: 2px 0;
+        }
+
+        .title-footer {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* ========================================================
+           ОСНОВНИЙ ТЕКСТ ЗВІТУ
+           ======================================================== */
+        h2.section-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            color: #000;
+        }
+
+        h3.subsection-title {
+            font-size: 14pt;
+            font-weight: bold;
+            margin: 16px 0 8px 0;
+            color: #000;
+        }
+
+        p {
+            margin: 6px 0;
+            text-align: justify;
+            text-indent: 1.25cm;
+        }
+
+        p.no-indent {
+            text-indent: 0;
+        }
+
+        ul, ol {
+            margin: 6px 0 10px 1.25cm;
+            padding-left: 10px;
+        }
+
+        li {
+            margin: 4px 0;
+            text-align: justify;
+        }
+
+        /* Блок посилань */
+        .links-block {
+            margin: 12px 0 18px 0;
+            font-style: italic;
+            font-size: 13pt;
+        }
+
+        .links-block a {
+            color: #003399;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+
+        /* Ілюстрації */
+        .figure-container {
+            margin: 16px auto;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+
+        .figure-img {
+            max-width: 95%;
+            height: auto;
+            border: 1px solid #c0c0c0;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            display: inline-block;
+        }
+
+        .figure-caption {
+            font-size: 12pt;
+            margin-top: 8px;
+            font-weight: normal;
+            color: #000;
+        }
+
+        /* Таблиця коду або властивостей */
+        .code-preview {
+            background-color: #f8f9fa;
+            border: 1px solid #dcdcdc;
+            border-left: 4px solid #4a76a8;
+            padding: 10px 15px;
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 11pt;
+            line-height: 1.35;
+            margin: 12px 0;
+            white-space: pre-wrap;
+            text-indent: 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================================
+         СТОРІНКА 1: ТИТУЛЬНИЙ АРКУШ
+         ======================================================== -->
+    <div class="page title-page">
+        <div class="univ-header">
+            <p>КИЇВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ</p>
+            <p>ІМЕНІ ТАРАСА ШЕВЧЕНКА</p>
+            <p style="margin-top: 15px;">ФАКУЛЬТЕТ ІНФОРМАЦІЙНИХ ТЕХНОЛОГІЙ</p>
+            <p style="margin-top: 15px;">КАФЕДРА ІНТЕЛЕКТУАЛЬНИХ ТЕХНОЛОГІЙ</p>
+        </div>
+
+        <div class="title-middle">
+            <h1>Лабораторна робота №5</h1>
+            <div class="sub-discipline">з дисципліни «Проектування та розробка веб-застосувань»</div>
+            <div class="topic">Тема Роботи: «Основи мови JavaScript: робота з об'єктом Date, масивами, циклами, об'єктами користувача, моделлю DOM та подіями»</div>
+            <div class="variant">Варіант №16 (Варіант 6)</div>
+        </div>
+
+        <div class="title-meta-block">
+            <div class="title-meta-content">
+                <p><b>Виконав студент</b></p>
+                <p>групи АнД - 31:</p>
+                <p>Мамон Р.Д.</p>
+                <br>
+                <p><b>Перевірила:</b></p>
+                <p>Федусенко О.В.</p>
+            </div>
+        </div>
+
+        <div class="title-footer">
+            Київ - 2026
+        </div>
+    </div>
+
+    <!-- ========================================================
+         СТОРІНКА 2: ТЕМА, МЕТА, ЗАВДАННЯ
+         ======================================================== -->
+    <div class="page">
+        <h2 class="section-title">Тема</h2>
+        <p class="no-indent">Основи мови JavaScript: робота з об'єктом Date, масивами, циклами, об'єктами користувача, моделлю DOM та подіями.</p>
+
+        <h2 class="section-title">Мета</h2>
+        <p>Розглянути можливості роботи з датою в JavaScript (об'єкт <code>Date()</code>), використання масивів та циклів у JavaScript, перевірки значень у коді скрипта. Навчитися створювати і використовувати об'єкти користувача в JavaScript з використанням моделі DOM та працювати з подіями.</p>
+
+        <h2 class="section-title">Завдання</h2>
+        <p>Необхідно розробити та протестувати інтерактивний веб-застосунок на основі мови JavaScript за закріпленим варіантом (номер у групі 16, варіант індивідуального завдання 6):</p>
+        
+        <p class="no-indent" style="font-weight: bold; margin-top: 10px;">1. Робота з масивами об'єктів та об'єктом Date (Завдання 1, Варіант 6):</p>
+        <ul>
+            <li>Створити масив об'єктів про кінофільми з обов'язковими атрибутами: назва фільму, кінотеатр, зал (допускається порожнє значення), дата початку прокату, сеанс.</li>
+            <li>Реалізувати розрахунок тривалості прокату: кожен фільм демонструється у кінотеатрі рівно 10 днів від дати прем'єри.</li>
+            <li>Реалізувати обчислення та наочне виведення інформації про те, скільки днів залишилося до показу фільмів, які фільми демонструються сьогодні, та скільки днів залишилося до завершення їх показу.</li>
+            <li>Якщо зал не вказаний, вивести додаткове текстове повідомлення: «У кінотеатрі лише один зал».</li>
+            <li>Здійснити кольорове маркування статусів прокату (активний показ, завершення прокату, показ закінчено, очікується прем'єра).</li>
+        </ul>
+
+        <p class="no-indent" style="font-weight: bold; margin-top: 10px;">2. Маніпуляція вузлами DOM-дерева (Завдання 2.1, Варіант 6):</p>
+        <ul>
+            <li>Розмістити на веб-сторінці блоки <code>&lt;div&gt;</code>, які містять текстову інформацію.</li>
+            <li>Обійти всі вказані блоки за допомогою засобів об'єктної моделі документа (DOM) та динамічно сформувати впорядкований нумерований список (<code>&lt;ol&gt;</code>), елементами якого є текстовий вміст блоків.</li>
+        </ul>
+
+        <p class="no-indent" style="font-weight: bold; margin-top: 10px;">3. Обробка числової матриці та динамічна зміна стилів (Завдання 2.2, Варіант 6):</p>
+        <ul>
+            <li>Задати на сторінці таблицю з числами (розмірністю 4х4), яка містить як додатні, так і від'ємні значення.</li>
+            <li>При натисканні на кнопку зчитати значення комірок у двовимірний масив і виконати пошук екстремумів: окремо визначити максимальне та мінімальне додатне число, а також максимальне (найближче до 0) та мінімальне від'ємне число.</li>
+            <li>Виокремити кольорами всі додатні та від'ємні числа в таблиці, а знайдені екстремальні значення виділити контрастними акцентними кольорами.</li>
+            <li>(Додатково) Реалізувати обчислення та виведення сум чисел за кожним окремим стовпцем числової матриці.</li>
+        </ul>
+    </div>
+
+    <!-- ========================================================
+         СТОРІНКА 3: ХІД РОБОТИ - ЗАГАЛЬНА АРХІТЕКТУРА ТА ЗАВДАННЯ 1
+         ======================================================== -->
+    <div class="page">
+        <h2 class="section-title">Хід роботи</h2>
+
+        <div class="links-block">
+            <b>Посилання на GitHub репозиторій:</b> <a href="https://github.com/GGREH/WebGit.git" target="_blank">https://github.com/GGREH/WebGit.git</a><br>
+            <b>Шлях до каталогу проекту:</b> <a href="https://github.com/GGREH/WebGit/tree/main/LR5" target="_blank">https://github.com/GGREH/WebGit/tree/main/LR5</a>
+        </div>
+
+        <p>Веб-застосунок організовано за модульною структурою, що складається з окремих сторінок, зв'язаних єдиною навігаційною панеллю:</p>
+        <ul>
+            <li><code>index.html</code> — головна сторінка з описом лабораторної роботи, персональними даними студента та картою завдань;</li>
+            <li><code>task1.html</code> — сторінка виконання Завдання 1 (кіноафіша);</li>
+            <li><code>task2.html</code> — сторінка виконання Завдання 2 (робота з DOM-вузлами та матрицею чисел);</li>
+            <li><code>CSS/style.css</code> — єдина таблиця стилів інтерфейсу, таблиць, кнопок та адаптивних блоків;</li>
+            <li><code>JS/task1.js</code> та <code>JS/task2.js</code> — окремі скрипти логіки виконання завдань.</li>
+        </ul>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig01_index.png" alt="Головна сторінка веб-застосунку">
+            <div class="figure-caption">Рис. 1 - Головна сторінка веб-застосунку з навігаційним меню та описом завдань варіанту</div>
+        </div>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig02_task1_initial.png" alt="Початковий стан Завдання 1">
+            <div class="figure-caption">Рис. 2 - Початковий вигляд інтерфейсу Завдання 1 (Кіноафіша) перед запуском скрипта</div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         СТОРІНКА 4: ЗАВДАННЯ 1 - РЕЗУЛЬТАТ ТА АНАЛІЗ КОДУ
+         ======================================================== -->
+    <div class="page">
+        <h3 class="subsection-title">1. Реалізація кіноафіші та обробка дат у JavaScript (Завдання 1)</h3>
+        <p>Для збереження вихідних даних створено масив <code>arrMovies</code>, елементами якого є об'єкти з полями <code>Name</code>, <code>Cinema</code>, <code>Hall</code>, <code>Data</code>, <code>Time</code>. Для тестування граничних умов у частині об'єктів поле <code>Hall</code> залишено порожнім.</p>
+        <p>Для визначення часової різниці реалізовано функцію <code>ras_Diff_Days(text)</code>, яка парсить рядок формату <code>DD.MM.YYYY</code>, створює екземпляр <code>Date</code>, обчислює різницю у мілісекундах відносно поточної дати (<code>new Date()</code>) та переводить її у кількість повних діб за допомогою формули: <code>Math.floor(timeDiff / (1000 * 3600 * 24))</code>.</p>
+        <p>Функція <code>vivod()</code> ітерує масив через <code>forEach</code> та перевіряє статус прокату: фільми, прем'єра яких ще не відбулася (білий фон), фільми в прокаті (зелений колір), фільми, до закінчення показу яких залишилося &le; 2 днів (попереджувальний жовтий колір), та завершені покази (червоний колір). Якщо <code>Hall == ""</code>, до стовпця виводиться спеціальне повідомлення: «Не вказано (у кінотеатрі лише один зал)».</p>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig03_task1_table.png" alt="Сформована кіноафіша">
+            <div class="figure-caption">Рис. 3 - Динамічно згенерована кіноафіша з підрахунком днів, кольоровими статусами та перевіркою залів</div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         СТОРІНКА 5: ЗАВДАННЯ 2.1 - ОБХІД DOM-ВУЗЛІВ ТА СПИСОК
+         ======================================================== -->
+    <div class="page">
+        <h3 class="subsection-title">2. Обхід вузлів DOM та формування нумерованого списку (Завдання 2.1)</h3>
+        <p>У Завданні 2.1 продемонстровано роботу з об'єктною моделлю документа (Document Object Model). На сторінці розміщено блоки <code>&lt;div class="source-block"&gt;</code>, кожен з яких містить окреме текстове твердження про будову DOM-дерева.</p>
+        <p>Функція <code>div_to_list()</code> здійснює вибірку колекції вузлів за селектором <code>document.getElementsByClassName("source-block")</code>, обходить знайдений масив у циклі <code>for</code>, зчитує чистий текст через властивість <code>textContent</code> та генерує HTML-розмітку нумерованого списку <code>&lt;ol&gt;</code>, яка потім записується у контейнер результату за допомогою <code>innerHTML</code>.</p>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig04_task2_initial.png" alt="Початковий стан Завдання 2">
+            <div class="figure-caption">Рис. 4 - Загальний вигляд сторінки Завдання 2 з вихідними текстовими блоками та матрицею чисел</div>
+        </div>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig05_task2_1_list.png" alt="Результат Завдання 2.1">
+            <div class="figure-caption">Рис. 5 - Сформований нумерований список після обходу блоків div засобами DOM (Завдання 2.1)</div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         СТОРІНКА 6: ЗАВДАННЯ 2.2 - МАТРИЦЯ, ЕКСТРЕМУМИ ТА КОЛЬОРИ
+         ======================================================== -->
+    <div class="page">
+        <h3 class="subsection-title">3. Обробка числової матриці, пошук екстремумів та стилізація (Завдання 2.2)</h3>
+        <p>У Завданні 2.2 реалізовано алгоритм парсингу HTML-таблиці чисел розміром 4х4 у числовий двовимірний масив за допомогою функції <code>generate_arr()</code>. Зчитування здійснюється через доступ до колекцій <code>table.rows[i].cells[j]</code> та перетворення рядків на числа функцією <code>parseFloat()</code>.</p>
+        <p>Функція <code>table_obrab()</code> за два проходи вирішує поставлену задачу:</p>
+        <ul>
+            <li><b>Перший прохід:</b> ідентифікація екстремальних значень окремо для додатних (<code>maxPos</code>, <code>minPos</code>) та від'ємних чисел (<code>maxNeg</code> — найближче до 0, <code>minNeg</code> — найменше значення);</li>
+            <li><b>Другий прохід:</b> маніпуляція властивостями <code>cell.style.backgroundColor</code> та <code>cell.style.color</code> кожної клітинки. Додатні числа фарбуються у світло-блакитний колір (<code>#bbdefb</code>), з акцентом на максимум (яскраво-зелений <code>#2ecc71</code>) та мінімум (м'ятний <code>#a8e6cf</code>). Від'ємні числа фарбуються у світло-оранжевий (<code>#ffe0b2</code>), з виділенням мінімального (червоний <code>#e74c3c</code>) та максимального (кораловий <code>#ffab91</code>).</li>
+        </ul>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig04b_task2_2_initial.png" alt="Вихідна матриця 4х4">
+            <div class="figure-caption">Рис. 6 - Вихідна числова таблиця 4х4 до виконання алгоритму обробки (Завдання 2.2)</div>
+        </div>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig06b_task2_2_colored.png" alt="Результат обробки матриці">
+            <div class="figure-caption">Рис. 7 - Результат пошуку екстремумів та кольорового маркування чарунок матриці (Завдання 2.2, Варіант 6)</div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         СТОРІНКА 7: ДОДАТКОВЕ ЗАВДАННЯ ТА ВИСНОВОК
+         ======================================================== -->
+    <div class="page">
+        <h3 class="subsection-title">4. Додаткове завдання: розрахунок сум елементів по стовпцях</h3>
+        <p>Як додатковий аналітичний функціонал реалізовано функцію <code>col_sums()</code>, яка здійснює математичний підсумок числових значень за вертикальними стовпцями матриці. Результати обчислень виводяться у вигляді структурованого маркованого списку.</p>
+
+        <div class="figure-container">
+            <img class="figure-img" src="report_screenshots/fig07_task2_2_cols.png" alt="Результат підрахунку сум за стовпцями">
+            <div class="figure-caption">Рис. 8 - Результат підрахунку сум числових елементів за стовпцями матриці (Завдання 2.2)</div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 30px;">Висновок</h2>
+        <p>У ході виконання лабораторної роботи №5 було успішно освоєно базові та поглиблені принципи програмування на стороні клієнта мовою JavaScript, роботу з об'єктною моделлю документа (DOM) та обробку подій користувача.</p>
+        <p>Під час виконання Завдання 1 опрацьовано механізми маніпуляції з об'єктом <code>Date()</code>: виконано коректне перетворення текстових форматів дат на об'єкти часу, розрахунок інтервалів у мілісекундах та їх конвертацію в календарні дні. Засвоєно структурування комплексних сутностей через масиви об'єктів, методи ітерації (<code>forEach</code>), перевірку граничних і порожніх значень та динамічну генерацію табличних структур.</p>
+        <p>У Завданні 2.1 освоєно техніку обходу вузлів HTML-документа за допомогою інтерфейсу DOM (<code>getElementsByClassName</code>), безпечне вилучення текстового вмісту через властивість <code>textContent</code> та конструювання впорядкованих списків.</p>
+        <p>У Завданні 2.2 закріплено алгоритми обробки двовимірних матриць у JavaScript: вилучення числових даних із чарунок таблиці, пошук екстремумів серед множин додатних і від'ємних чисел, а також інтерактивне керування візуальним оформленням сторінки через модифікацію інлайн-стилів елементів (<code>style.backgroundColor</code>, <code>style.color</code>). Додатково розроблено алгоритм вертикального підсумовування елементів по стовпцях.</p>
+        <p>Усі розроблені модулі протестовано у сучасному веб-браузері. Код написано відповідно до стандартів ES6+, структуровано за модульним принципом із розділенням розмітки, стилів та логіки, що забезпечує високу підтримуваність та надійність веб-застосунку.</p>
+    </div>
+
+</body>
+</html>
