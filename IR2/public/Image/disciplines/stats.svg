@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="85" fill="#e0e7ff" stroke="#4f46e5" stroke-width="4"/>
+  <path d="M45,140 Q75,135 85,90 Q100,35 115,90 Q125,135 155,140" fill="none" stroke="#4338ca" stroke-width="5"/>
+  <line x1="40" y1="142" x2="160" y2="142" stroke="#1e1b4b" stroke-width="3"/>
+  <text x="100" y="168" text-anchor="middle" fill="#312e81" font-family="Arial, sans-serif" font-size="15" font-weight="bold">STATISTICS</text>
+</svg>
+

@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.h2-section {
+    font-family: var(--font-h);
+    font-size: var(--font-size-h2);
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-yellow);
+    margin-bottom: 25px;
+    align-self: center;
+    text-align: center;
+}

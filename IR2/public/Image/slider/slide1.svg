@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="400" rx="16" fill="url(#bg1)"/>
+  <circle cx="420" cy="80" r="90" fill="#38bdf8" opacity="0.12"/>
+  <circle cx="80" cy="330" r="110" fill="#f59e0b" opacity="0.1"/>
+  <!-- Аналитичні графіки -->
+  <rect x="60" y="70" width="380" height="230" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="90" y1="260" x2="410" y2="260" stroke="#64748b" stroke-width="2"/>
+  <line x1="90" y1="100" x2="90" y2="260" stroke="#64748b" stroke-width="2"/>
+  <rect x="115" y="190" width="35" height="70" rx="4" fill="#38bdf8"/>
+  <rect x="170" y="150" width="35" height="110" rx="4" fill="#60a5fa"/>
+  <rect x="225" y="120" width="35" height="140" rx="4" fill="#f59e0b"/>
+  <rect x="280" y="160" width="35" height="100" rx="4" fill="#34d399"/>
+  <rect x="335" y="105" width="35" height="155" rx="4" fill="#a78bfa"/>
+  <polyline points="132,180 187,140 242,110 297,145 352,95" fill="none" stroke="#facc15" stroke-width="3"/>
+  <text x="250" y="345" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Лабораторія Data Science</text>
+  <text x="250" y="372" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Інтелектуальний аналіз та візуалізація даних</text>
+</svg>
+

@@ -1,0 +1,10 @@
+{
+  "short_name": "ОП Аналіз даних",
+  "name": "Сайт освітньої програми за спеціальністю 122 Комп'ютерні науки",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e293b",
+  "background_color": "#ffffff"
+}
+

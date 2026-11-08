@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="85" fill="#d1fae5" stroke="#059669" stroke-width="4"/>
+  <ellipse cx="100" cy="68" rx="45" ry="14" fill="#10b981" stroke="#065f46" stroke-width="3"/>
+  <path d="M55,68 v30 c0,8 20,14 45,14 s45,-6 45,-14 v-30" fill="#34d399" stroke="#065f46" stroke-width="3"/>
+  <path d="M55,98 v30 c0,8 20,14 45,14 s45,-6 45,-14 v-30" fill="#6ee7b7" stroke="#065f46" stroke-width="3"/>
+  <text x="100" y="168" text-anchor="middle" fill="#064e3b" font-family="Arial, sans-serif" font-size="15" font-weight="bold">SQL &amp; NoSQL</text>
+</svg>
+

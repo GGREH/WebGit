@@ -1,0 +1,107 @@
+header {
+    min-height: 550px;
+    background-color: var(--color-dark);
+    padding-top: 85px;
+}
+
+.header_menu_main {
+    padding-left: var(--padding);
+    width: 100%;
+    color: var(--color-white);
+    font-size: var(--font-size-p);
+    height: 75px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-dark);
+    border-bottom: 1px solid #444;
+    z-index: 5;
+}
+
+.header_menu_main a {
+    transition: color 0.5s;
+}
+
+.header_menu_main a:hover {
+    color: var(--color-yellow);
+    border-bottom: 1px solid var(--color-yellow);
+    transition: color 0.5s, border-bottom 0.5s;
+}
+
+.header-section {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.about {
+    width: 45%;
+}
+
+.about p {
+    font-family: var(--font);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.student-info {
+    color: var(--color-yellow);
+    font-weight: bold;
+}
+
+.about-h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: var(--margin);
+    font-family: var(--font-h);
+}
+
+.about-img {
+    width: 380px;
+    height: 320px;
+    object-fit: contain;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .about-h1 {
+        font-size: 30px;
+    }
+
+    .about-img {
+        width: 240px;
+        height: 220px;
+    }
+
+    header {
+        min-height: 420px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .about-img {
+        display: none;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .header_menu_main {
+        width: 100%;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+}

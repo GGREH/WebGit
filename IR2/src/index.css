@@ -1,0 +1,28 @@
+@import './reset.css';
+
+:root {
+    --color-dark: #222831;
+    --color-light: #eeeeee;
+    --color-white: #ffffff;
+    --color-yellow: #e1b168;
+
+    --font-h: 'Times New Roman', Times, serif;
+    --font: 'Times New Roman', Times, serif;
+
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 22px;
+    --font-size-p: 18px;
+
+    --padding: 30px;
+    --margin: 20px;
+    --gap: 20px;
+    --card-height: 360px;
+}
+
+body {
+    margin: auto;
+    background-color: #ffffff;
+    color: rgba(34, 34, 34, 1);
+    font-family: var(--font);
+}

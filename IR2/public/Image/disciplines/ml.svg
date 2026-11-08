@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="85" fill="#fef3c7" stroke="#d97706" stroke-width="4"/>
+  <circle cx="65" cy="75" r="12" fill="#d97706"/>
+  <circle cx="65" cy="125" r="12" fill="#d97706"/>
+  <circle cx="135" cy="100" r="15" fill="#b45309"/>
+  <line x1="77" y1="75" x2="120" y2="100" stroke="#92400e" stroke-width="4"/>
+  <line x1="77" y1="125" x2="120" y2="100" stroke="#92400e" stroke-width="4"/>
+  <text x="100" y="165" text-anchor="middle" fill="#78350f" font-family="Arial, sans-serif" font-size="15" font-weight="bold">MACHINE LEARNING</text>
+</svg>
+

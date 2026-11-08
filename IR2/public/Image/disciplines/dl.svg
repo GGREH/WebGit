@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="85" fill="#fce7f3" stroke="#db2777" stroke-width="4"/>
+  <circle cx="70" cy="70" r="10" fill="#db2777"/>
+  <circle cx="130" cy="70" r="10" fill="#db2777"/>
+  <circle cx="100" cy="105" r="12" fill="#be185d"/>
+  <circle cx="70" cy="135" r="10" fill="#db2777"/>
+  <circle cx="130" cy="135" r="10" fill="#db2777"/>
+  <line x1="70" y1="70" x2="100" y2="105" stroke="#9d174d" stroke-width="3"/>
+  <line x1="130" y1="70" x2="100" y2="105" stroke="#9d174d" stroke-width="3"/>
+  <line x1="70" y1="135" x2="100" y2="105" stroke="#9d174d" stroke-width="3"/>
+  <line x1="130" y1="135" x2="100" y2="105" stroke="#9d174d" stroke-width="3"/>
+  <text x="100" y="170" text-anchor="middle" fill="#831843" font-family="Arial, sans-serif" font-size="14" font-weight="bold">DEEP LEARNING</text>
+</svg>
+

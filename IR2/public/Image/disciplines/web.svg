@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="85" fill="#e0f2fe" stroke="#0284c7" stroke-width="4"/>
+  <ellipse cx="100" cy="95" rx="52" ry="20" fill="none" stroke="#0284c7" stroke-width="4" transform="rotate(30 100 95)"/>
+  <ellipse cx="100" cy="95" rx="52" ry="20" fill="none" stroke="#0284c7" stroke-width="4" transform="rotate(-30 100 95)"/>
+  <ellipse cx="100" cy="95" rx="52" ry="20" fill="none" stroke="#0284c7" stroke-width="4"/>
+  <circle cx="100" cy="95" r="9" fill="#0369a1"/>
+  <text x="100" y="168" text-anchor="middle" fill="#0c4a6e" font-family="Arial, sans-serif" font-size="15" font-weight="bold">WEB &amp; REACT</text>
+</svg>
+

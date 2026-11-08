@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "name": "Вища та дискретна математика",
+        "credits": 60,
+        "semester": "1–2 семестр",
+        "type": "math",
+        "categoryLabel": "Фундаментальний цикл",
+        "photo": "./Image/disciplines/math.svg"
+    },
+    {
+        "id": 2,
+        "name": "Теорія ймовірностей та матстатистика",
+        "credits": 5,
+        "semester": "3 семестр",
+        "type": "math",
+        "categoryLabel": "Фундаментальний цикл",
+        "photo": "./Image/disciplines/stats.svg"
+    },
+    {
+        "id": 3,
+        "name": "Алгоритми і структури даних",
+        "credits": 5,
+        "semester": "2 семестр",
+        "type": "math",
+        "categoryLabel": "Фундаментальний цикл",
+        "photo": "./Image/disciplines/algo.svg"
+    },
+    {
+        "id": 4,
+        "name": "Машинне навчання (Machine Learning)",
+        "credits": 6,
+        "semester": "5 семестр",
+        "type": "data",
+        "categoryLabel": "Аналіз даних та ШІ",
+        "photo": "./Image/disciplines/ml.svg"
+    },
+    {
+        "id": 5,
+        "name": "Глибоке навчання та нейронні мережі",
+        "credits": 6,
+        "semester": "6 семестр",
+        "type": "data",
+        "categoryLabel": "Аналіз даних та ШІ",
+        "photo": "./Image/disciplines/dl.svg"
+    },
+    {
+        "id": 6,
+        "name": "Технології Big Data та BI-аналітика",
+        "credits": 5,
+        "semester": "6 семестр",
+        "type": "data",
+        "categoryLabel": "Аналіз даних та ШІ",
+        "photo": "./Image/disciplines/bigdata.svg"
+    },
+    {
+        "id": 7,
+        "name": "Організація баз даних та знань (SQL/NoSQL)",
+        "credits": 5,
+        "semester": "4 семестр",
+        "type": "it",
+        "categoryLabel": "Програмна інженерія",
+        "photo": "./Image/disciplines/db.svg"
+    },
+    {
+        "id": 8,
+        "name": "Проєктування веб-застосувань (React)",
+        "credits": 5,
+        "semester": "5 семестр",
+        "type": "it",
+        "categoryLabel": "Програмна інженерія",
+        "photo": "./Image/disciplines/web.svg"
+    },
+    {
+        "id": 9,
+        "name": "Програмування мовами Python та R",
+        "credits": 6,
+        "semester": "3–4 семестр",
+        "type": "it",
+        "categoryLabel": "Програмна інженерія",
+        "photo": "./Image/disciplines/python.svg"
+    }
+]
+

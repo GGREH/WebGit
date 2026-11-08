@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="85" fill="#f3e8ff" stroke="#9333ea" stroke-width="4"/>
+  <polygon points="100,45 148,75 148,125 100,155 52,125 52,75" fill="none" stroke="#7e22ce" stroke-width="4"/>
+  <circle cx="100" cy="100" r="18" fill="#a855f7"/>
+  <text x="100" y="175" text-anchor="middle" fill="#581c87" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ALGORITHMS</text>
+</svg>
+
