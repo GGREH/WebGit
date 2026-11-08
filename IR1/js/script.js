@@ -80,7 +80,13 @@ const fallbackFacultiesData = [
 // Читання інформації з хмарного сховища (jsonbin.io або локального JSON-файлу)
 async function populate() {
     // URL хмарного сховища jsonbin.io (можна підставити власний ID біну з jsonbin.io)
-    const requestURL = "faculties.json";
+
+    // 1. Звичайний набір даних
+    // const requestURL = "https://api.jsonbin.io/v3/b/6af05037ffd5d16053b0c62c";
+
+    // 2. Модификований набір даних
+    // const requestURL = "https://api.jsonbin.io/v3/b/6af0515affd5d16053b0c7d2";
+
     try {
         const request = new Request(requestURL);
         const response = await fetch(request);
