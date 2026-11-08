@@ -53,10 +53,17 @@ arrMovies[5] = {
 };
 
 let html = "";
+let maxTime = "";
 
 /* ==========================================================================
    ФУНКЦІЇ РОЗРАХУНКУ ТА ВИВЕДЕННЯ
    ========================================================================== */
+
+// Перетворення часу "ГГ:ХХ" у хвилини для коректного порівняння
+function timeToMinutes(timeStr) {
+    let parts = timeStr.split(':');
+    return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+}
 
 // Розрахунок різниці між поточною датою і датою початку фільму
 function ras_Diff_Days(text) {
@@ -76,28 +83,39 @@ function ras_Diff_Days(text) {
 function vivod(item, i, array) {
     let daysPassed = ras_Diff_Days(item['Data']);
     let statusText = "";
-    let rowStyle = "";
+    let bgColor = "";
 
     // Кожен фільм демонструється 10 днів
     if (daysPassed < 0) {
         // Фільм ще не почався
         let daysToStart = Math.abs(daysPassed);
         statusText = "Прем'єра через " + daysToStart + " дн.";
-        rowStyle = "";
     } else if (daysPassed >= 0 && daysPassed <= 10) {
         // Фільм демонструється сьогодні
         let daysLeft = 10 - daysPassed;
         if (daysLeft <= 2) {
-            rowStyle = "style='background-color: #fff9c4;'"; // Жовтий: закінчується показ
+            bgColor = "background-color: #fff9c4;"; // Жовтий: закінчується показ
             statusText = "Сьогодні йде (залишилось " + daysLeft + " дн.)";
         } else {
-            rowStyle = "style='background-color: #c8e6c9;'"; // Зелений: йде сьогодні
+            bgColor = "background-color: #c8e6c9;"; // Зелений: йде сьогодні
             statusText = "Сьогодні йде (залишилось " + daysLeft + " дн.)";
         }
     } else {
         // Минуло більше 10 днів
-        rowStyle = "style='background-color: #ffcdd2;'"; // Червоний: показ завершено
+        bgColor = "background-color: #ffcdd2;"; // Червоний: показ завершено
         statusText = "Показ завершено";
+    }
+
+    // Виділення фільму з максимальним часом показу (найпізніший сеанс)
+    let isMaxTime = (item['Time'] === maxTime);
+    let rowStyle = "";
+    let timeCell = item['Time'];
+
+    if (isMaxTime) {
+        rowStyle = "style='background-color: #bbdefb; outline: 2px solid #1976d2;'";
+        timeCell = "<span style='color: #0d47a1;'>" + item['Time'] + "</span>";
+    } else if (bgColor !== "") {
+        rowStyle = "style='" + bgColor + "'";
     }
 
     // Перевірка зали (якщо зал не вказано)
@@ -112,18 +130,32 @@ function vivod(item, i, array) {
     html = html + "<td>" + item['Cinema'] + "</td>";
     html = html + "<td>" + hallInfo + "</td>";
     html = html + "<td>" + item['Data'] + "</td>";
-    html = html + "<td>" + item['Time'] + "</td>";
+    html = html + "<td>" + timeCell + "</td>";
     html = html + "<td>" + statusText + "</td>";
     html = html + "</tr>";
 }
 
 // Головна функція, яка викликається при натисканні кнопки
 function ras() {
+    // Пошук максимального часу показу серед усіх фільмів
+    let maxMinutes = -1;
+    let maxMovieName = "";
+    maxTime = "";
+
+    for (let i = 0; i < arrMovies.length; i++) {
+        let currentMinutes = timeToMinutes(arrMovies[i]['Time']);
+        if (currentMinutes > maxMinutes) {
+            maxMinutes = currentMinutes;
+            maxTime = arrMovies[i]['Time'];
+            maxMovieName = arrMovies[i]['Name'];
+        }
+    }
+
     html = "<table class='b-table'>";
     html = html + "<tr><th>№</th><th>Назва фільму</th><th>Кінотеатр</th><th>Зал</th><th>Дата початку</th><th>Сеанс</th><th>Статус / Термін</th></tr>";
-    
+
     arrMovies.forEach(vivod);
-    
+
     html = html + "</table>";
     document.getElementById('rezult').innerHTML = html;
 }

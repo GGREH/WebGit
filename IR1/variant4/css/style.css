@@ -1,0 +1,157 @@
+/* Суворий класичний стиль сторінки (Варіант 4) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px 15px;
+    color: #1f2933;
+}
+
+.b-main {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #adb5bd;
+    padding: 25px 30px;
+}
+
+/* Сувора шапка без заокруглень та градієнтів */
+.b-header {
+    text-align: left;
+    background: #212529;
+    color: #ffffff;
+    padding: 18px 24px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #495057;
+}
+
+.b-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.b-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #dee2e6;
+}
+
+.variant-badge {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #adb5bd;
+    font-weight: 600;
+}
+
+/* Блок тексту завдання */
+.b-task {
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-left: 4px solid #212529;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.b-task h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #212529;
+    text-transform: uppercase;
+}
+
+.b-task p {
+    margin: 0 0 8px 0;
+}
+
+.b-task ol {
+    margin: 6px 0 0 20px;
+    padding: 0;
+}
+
+.b-task a {
+    color: #212529;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Заголовок розділу результатів */
+.card-title h1 {
+    text-align: center;
+    color: #212529;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 10px 0 18px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #212529;
+}
+
+/* Сітка з трьома групами факультетів */
+.card {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.group-box {
+    flex: 1 1 300px;
+    background: #ffffff;
+    border: 1px solid #adb5bd;
+    padding: 0;
+}
+
+.group-box h2 {
+    margin: 0;
+    padding: 12px 15px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background-color: #343a40;
+    color: #ffffff;
+    border-bottom: 1px solid #adb5bd;
+}
+
+.group-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.group-box li {
+    background: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 12px 15px;
+}
+
+.group-box li:last-child {
+    border-bottom: none;
+}
+
+.group-box li:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.faculty-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #212529;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.faculty-meta {
+    font-size: 13px;
+    color: #495057;
+    display: block;
+}

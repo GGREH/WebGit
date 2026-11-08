@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Самостійна робота №1 | Варіант 4 — ООП + Хмара</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/faculty.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main id="content" class="b-main">
+        <!-- Шапка: ПІБ студента, номер групи і номер варіанту -->
+        <header class="b-header">
+            <h1>Самостійна робота № 1. Робота з хмарними сховищами</h1>
+            <h2>Виконав студент групи АнД-31 Мамон Роман Дмитрович</h2>
+            <p class="variant-badge">Номер у групі: 16 | Варіант 4</p>
+        </header>
+
+        <!-- Текст завдання -->
+        <section class="b-task">
+            <h3>Завдання на самостійну роботу (Варіант 4):</h3>
+            <p>
+                Необхідно створити сторінку для обробки JSON файлу, отриманого з хмарного сховища
+                (<b>Перелік факультетів, які діляться на загальні, технічні та гуманітарні</b>), а саме:
+            </p>
+            <ol>
+                <li>Створити JSON файл у хмарному сховищі <a href="https://jsonbin.io/" target="_blank" rel="noopener">https://jsonbin.io/</a> та зчитати інформацію за допомогою методу <code>fetch()</code>.</li>
+                <li>Створити базовий клас <code>Faculty</code> для роботи з даними.</li>
+                <li>Вивести інформацію на сторінку, поділивши факультети на три групи: <b>загальні</b>, <b>технічні</b> та <b>гуманітарні</b>.</li>
+            </ol>
+        </section>
+
+        <!-- Контейнер для заголовка списку, що формується скриптом -->
+        <div id="dynamic-header" class="card-title"></div>
+
+        <!-- Контейнер для виведення груп факультетів -->
+        <article class="card"></article>
+    </main>
+</body>
+</html>
+
