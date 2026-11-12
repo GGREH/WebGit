@@ -1,0 +1,59 @@
+<section class="flex section-center">
+    <div class="content">
+        <h2 class="gradient-text">Завдання (Варіант 4)</h2>
+        <p>
+            Базовий клас: <b>Тварина</b> (поля: кличка, ріст - h в м) <br />
+            Метод: Вага тварини - k * h<sup>3</sup> кг, де k - коефіцієнт. <br />
+            Нащадок: <b>Кішка</b> (k = 15, поле - порода тварини) <br />
+            Зміни в нащадках: Перевести вагу тварини в грами.
+        </p>
+    </div>
+</section>
+
+<section class="flex section-center">
+    <form class="flex flex-row flex-wrap form-box" (submit)="$event.preventDefault()">
+        <fieldset class="flex flex-column">
+            <legend>Тварина</legend>
+            <label>Кличка тварини:</label>
+            <input type="text" value="Рекс" placeholder="Кличка" #name1 />
+            <label>Ріст h (у метрах):</label>
+            <input type="number" value="0.6" min="0.01" step="0.05" placeholder="Ріст h (м)" #h1 />
+            <label>Коефіцієнт k:</label>
+            <input type="number" value="120" min="0.1" step="1" placeholder="Коефіцієнт k" #k1 />
+        </fieldset>
+
+        <fieldset class="flex flex-column">
+            <legend>Кішка (k = 15)</legend>
+            <label>Кличка кішки:</label>
+            <input type="text" value="Мурка" placeholder="Кличка" #name2 />
+            <label>Ріст h (у метрах):</label>
+            <input type="number" value="0.65" min="0.01" step="0.05" placeholder="Ріст h (м)" #h2 />
+            <label>Порода кішки:</label>
+            <input type="text" value="Британська" placeholder="Порода" #breed2 />
+        </fieldset>
+    </form>
+</section>
+
+<section class="flex section-center">
+    <button
+        type="button"
+        class="btn"
+        (click)="calcAnimal(name1.value, h1.value, k1.value, name2.value, h2.value, breed2.value)"
+    >
+        <span>Розрахунок</span>
+    </button>
+</section>
+
+<section class="flex flex-column section-center results-box">
+    <h2 class="gradient-text">Результати обрахунків</h2>
+
+    <h4 class="error-text">{{ error_msg }}</h4>
+
+    <div class="flex flex-column result-items">
+        <h3 class="gradient-text">Тварина</h3>
+        <h4>{{ animal_show }}</h4>
+        <h3 class="gradient-text">Кішка</h3>
+        <h4>{{ cat_show }}</h4>
+    </div>
+</section>
+

@@ -1,0 +1,27 @@
+.profile-menu {
+    background-color: #2c3645;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-top: 1px solid #4a596e;
+    border-bottom: 1px solid #4a596e;
+}
+
+.profile-menu-link {
+    padding: 16px 20px;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+}
+
+.profile-menu-link.active,
+.profile-menu-link:hover {
+    color: #ffffff;
+    background-color: #1b1d2e;
+    border-bottom: 3px solid #1488fa;
+}
